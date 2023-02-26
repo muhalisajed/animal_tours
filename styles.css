@@ -1,9 +1,4 @@
 /* Global Styles */
-* {
-        /*border: .5px solid red;*/
-}
-
-
 html {
         font-size: 62.5%;
 }
@@ -15,7 +10,6 @@ body {
 }
 
 .width-container {
-        max-width: 375px;
         border: 1px solid black;
 }
 
@@ -40,6 +34,35 @@ p {
 }
 
 .img-cont-1 {
+        width: 268px;
+        height: 231px;
+        background-image: url(images/horse.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: .3em solid black;
+        border-radius: 1.6em;
+        filter: drop-shadow(3px 3px 0 black);
+        margin: 30px 40px;
+}
+
+.img-cont-2,
+.img-cont-3 {
+        display: none;
+}
+
+.img-cont-2 {
+        width: 268px;
+        height: 231px;
+        background-image: url(images/horse.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: .3em solid black;
+        border-radius: 1.6em;
+        filter: drop-shadow(3px 3px 0 black);
+        margin: 30px 40px;  
+}
+
+.img-cont-3 {
         width: 268px;
         height: 231px;
         background-image: url(images/horse.jpg);
@@ -82,4 +105,44 @@ h1 {
 
 .main p {
         width: 280px;
+}
+
+@media screen and (min-width:800px) {
+        * {
+                border: .5px solid red;
+        }
+
+        h1,
+        h2,
+        p {
+                text-align: start;
+        }
+
+        .hero {
+                align-items: flex-start;
+        }
+
+        p {
+                align-self: flex-start;
+                width: auto;
+        }
+
+        .img-row {
+                
+                display: flex;
+                flex-direction: row;
+                margin: 1em 0;
+        }
+
+        .img-cont-1,
+        .img-cont-2,
+        .img-cont-3 {
+                display: block;
+                width: 195px;
+                height: 149px;
+        }
+
+        .img-cont-2 {
+                align-self: flex-end;
+        }
 }
